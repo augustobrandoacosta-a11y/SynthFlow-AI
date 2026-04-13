@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Music Lab</title>
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.23.1"></script>
+    <style>
+        body { background: #121212; color: white; font-family: sans-serif; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(16, 1fr); gap: 4px; max-width: 800px; margin: 20px auto; }
+        .cell { width: 40px; height: 40px; border: 1px solid #333; cursor: pointer; }
+        .cell.active { background: #00ff88; box-shadow: 0 0 10px #00ff88; }
+        button { padding: 10px 20px; margin: 10px; cursor: pointer; background: #222; color: #00ff88; border: 1px solid #00ff88; border-radius: 5px; }
+        button:hover { background: #00ff88; color: #000; }
+    </style>
+</head>
+<body>
+    <h1>AI Music Sequencer</h1>
+    <div class="grid" id="grid"></div>
+    <button onclick="play()">Play</button>
+    <button onclick="generateAI()">AI Complete</button>
+    <button onclick="clearGrid()">Clear</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
